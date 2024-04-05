@@ -1,9 +1,7 @@
-import reactLogo from "../public/react.png"
-
-function App() {
+export default function App() {
   return (
-    <>
-      <img src={reactLogo} alt="react logo" width={180} />
+    <div className="app">
+      <img src="/react.png" alt="react logo" width={180} />
       <h1>React</h1>
       <p>A biblioteca para interfaces de usuário web e nativas</p>
       <button>Aprenda React</button>
@@ -23,8 +21,7 @@ function App() {
         <li>Lorem ipsum dolor sit.</li>
         <li>Lorem ipsum dolor sit.</li>
       </ul>
-    </>
+    </div>
   )
 }
 
-export default App
