@@ -4,6 +4,9 @@ export const PowerCalculator = () => {
     }
 
     return (
-        < p > A potencia de 12 é: {numberXnumber(12)}</p >
+        < h3 style={{
+            color: "#ee4444"
+        }}>
+            A potencia de 12 é: {numberXnumber(12)}</h3 >
     )
 }
