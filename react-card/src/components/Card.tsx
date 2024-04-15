@@ -1,12 +1,12 @@
 import styles from '../../styles/card.module.css'
 
-export default function Card() {
+export default function Card(props: { title: string, image: string }) {
 
     return (
         <div className={styles.card}>
-            <img className={styles.img} src="https://zootecniaprecisao.com.br/wp-content/uploads/2023/06/Fotos-abelha-polen-flor-cores-asa.webp" alt="Fotinha das abelhas" />
+            <img className={styles.img} src={props.image} alt="Fotinha das abelhas" />
             <div>
-                <h1 className={styles.tittle}>Importância das Abelhas</h1>
+                <h1 className={styles.tittle}>{props.title}</h1>
                 <p className={styles.description}>As abelhas desempenham um papel crucial na polinização de plantas, contribuindo para a reprodução de uma grande
                     variedade de culturas alimentares. Sem elas, muitas plantas não poderiam produzir frutos e sementes, impactando
                     diretamente a produção de alimentos. Além disso, as abelhas são essenciais para a manutenção da biodiversidade e
