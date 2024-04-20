@@ -1,11 +1,12 @@
 import btnStyles from "../styles/profile-btn.module.css"
 import profileStyles from "../styles/profile-styles.module.css"
+import image from "../images/zoro-image.jpg"
 
 export default function Profile() {
     return (
         <>
             <div className={profileStyles.profileComponent}>
-                <img src="https://uploads.jovemnerd.com.br/wp-content/uploads/2024/02/zoro_one_piece__122h6r.jpg" alt="" />
+                <img src={image} alt="imagem de perfil" />
                 <hr />
                 <h3 className="name">Guilherme Souza</h3>
                 <hr />
