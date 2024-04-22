@@ -1,24 +1,25 @@
 import btnStyles from "../styles/profile-btn.module.css"
 import profileStyles from "../styles/profile-styles.module.css"
-import image from "../images/zoro-image.jpg"
 
-export default function Profile() {
+export default function Profile(props: {
+    avatar: string, name: string, bio: string, email: string, phone: string,
+    githubUrl: string, linkedinUrl: string, facebookUrl: string
+}) {
     return (
         <>
             <div className={profileStyles.profileComponent}>
-                <img src={image} alt="imagem de perfil" />
+                <img src={props.avatar} alt="imagem de perfil" />
+                <h3 className="name">{props.name}</h3>
                 <hr />
-                <h3 className="name">Guilherme Souza</h3>
+                <p className="stack">{props.bio}</p>
                 <hr />
-                <p className="stack">Fullstack Javascript Developer</p>
+                <p className="phone">{props.phone}</p>
                 <hr />
-                <p className="phone">12991112772</p>
+                <p className="email">{props.email}</p>
                 <hr />
-                <p className="email">gui.edu0380@gmail.com</p>
-                <hr />
-                <button className={btnStyles.profileBtn}>github</button><br />
-                <button className={btnStyles.profileBtn}>github</button><br />
-                <button className={btnStyles.profileBtn}>github</button>
+                <a href={props.githubUrl} target="_blank"><button className={btnStyles.profileBtn}>GitHub</button></a><br />
+                <a href={props.linkedinUrl} target="_blank"><button className={btnStyles.profileBtn}>LinkedIn</button></a><br />
+                <a href={props.facebookUrl} target="_blank"><button className={btnStyles.profileBtn}>Facebook</button></a>
             </div>
         </>
     )
