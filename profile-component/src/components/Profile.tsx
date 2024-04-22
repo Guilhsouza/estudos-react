@@ -9,17 +9,15 @@ export default function Profile(props: {
         <>
             <div className={profileStyles.profileComponent}>
                 <img src={props.avatar} alt="imagem de perfil" />
-                <h3 className="name">{props.name}</h3>
-                <hr />
-                <p className="stack">{props.bio}</p>
-                <hr />
-                <p className="phone">{props.phone}</p>
-                <hr />
-                <p className="email">{props.email}</p>
-                <hr />
-                <a href={props.githubUrl} target="_blank"><button className={btnStyles.profileBtn}>GitHub</button></a><br />
-                <a href={props.linkedinUrl} target="_blank"><button className={btnStyles.profileBtn}>LinkedIn</button></a><br />
-                <a href={props.facebookUrl} target="_blank"><button className={btnStyles.profileBtn}>Facebook</button></a>
+                <h3>{props.name}</h3>
+                <div>{props.bio}</div>
+                <div>{props.phone}</div>
+                <div>{props.email}</div>
+                <div>
+                    <a href={props.githubUrl} target="_blank"><button className={btnStyles.profileBtn}>GitHub</button></a><br />
+                    <a href={props.linkedinUrl} target="_blank"><button className={btnStyles.profileBtn}>LinkedIn</button></a><br />
+                    <a href={props.facebookUrl} target="_blank"><button className={btnStyles.profileBtn}>Facebook</button></a>
+                </div>
             </div>
         </>
     )
