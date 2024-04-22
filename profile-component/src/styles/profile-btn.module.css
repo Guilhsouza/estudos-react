@@ -1,15 +1,17 @@
 .profileBtn {
     background-color: #2866b8;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     color: white;
     border-radius: 0.6rem;
     border: 0;
-    font-size: 1.6rem;
+    width: 13rem;
+    font-size: 1.4rem;
+    font-weight: bold;
     margin-top: 1rem;
-    margin-left: 1rem;
     padding: 1rem;
 }
 
 .profileBtn:hover {
-    background-color: #13263f;
+    background-color: #0e4185;
     transition: 0.4s;
 }
