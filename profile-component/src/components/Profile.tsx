@@ -1,3 +1,4 @@
+import { useState } from "react"
 import btnStyles from "../styles/profile-btn.module.css"
 import profileStyles from "../styles/profile-styles.module.css"
 import ProfileSection from "./ProfileSection"
@@ -6,11 +7,31 @@ export default function Profile(props: {
     avatar: string, name: string, bio: string, email: string, phone: string,
     githubUrl: string, linkedinUrl: string, facebookUrl: string
 }) {
+    const [followText, setFollowText] = useState('Follow')
+
+    function handleClick() {
+        console.log(followText)
+        if (followText === 'Follow') {
+            setFollowText('Unfollow')
+            return alert('deu bom papai!')
+        }
+
+        setFollowText('Follow')
+        return alert('deu ruim papai!')
+    }
+
     return (
         <>
             <div className={profileStyles.profileComponent}>
                 <img src={props.avatar} alt="imagem de perfil" />
-                <h3>{props.name}</h3>
+                <h3>
+                    {props.name}
+                    <button
+                        onClick={handleClick}
+                    >
+                        {followText}
+                    </button>
+                </h3>
                 <ProfileSection>{props.bio}</ProfileSection>
                 <ProfileSection>{props.phone}</ProfileSection>
                 <ProfileSection>{props.email}</ProfileSection>
