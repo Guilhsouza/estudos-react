@@ -1,0 +1,32 @@
+.container {
+    margin-top: 5rem;
+    font-family: sans-serif;
+    color: #f2f6f9;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.pswrd {
+    margin-top: 3rem;
+}
+
+.button {
+    background-color: #26292a;
+    border-radius: 0.4rem;
+    border: 1px solid #26292a;
+    color: #f2f5f9;
+    margin-top: 3rem;
+    padding: 0.6rem;
+    width: 6rem;
+    font-size: 1rem;
+}
+
+.buttonSpace {
+    margin-right: 2.6rem;
+}
+
+.button:active {
+    border: 1px solid rgb(255, 0, 255);
+}
