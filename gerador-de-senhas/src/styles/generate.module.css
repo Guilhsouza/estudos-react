@@ -12,7 +12,8 @@
     margin-top: 3rem;
 }
 
-.button {
+button,
+input {
     background-color: #26292a;
     border-radius: 0.4rem;
     border: 1px solid #26292a;
