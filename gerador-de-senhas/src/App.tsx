@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import styles from './styles/generate.module.css'
+import Input from './components/Input'
 
 export default function App() {
   const [password, setPassword] = useState('')
@@ -29,13 +30,7 @@ export default function App() {
         <h1 className={styles.title}>Gerador de Senhas</h1>
         <div>
           <label htmlFor='passwordSize'>Tamanho da senha: </label>
-          <input
-            type='number'
-            id='passwordSize'
-            min={1}
-            value={passwordSize}
-            onChange={(ev: React.ChangeEvent<HTMLInputElement>) => setPasswordSize(parseInt(ev.target.value))}
-          />
+          <Input passwordSize={passwordSize} setPasswordSize={setPasswordSize} />
         </div>
         <button className={`${styles.button} ${styles.buttonSpace}`} onClick={generate}>Gerar</button>
         <button className={styles.button} onClick={copyPassword}>{copyText}</button>
