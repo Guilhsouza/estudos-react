@@ -23,10 +23,10 @@ export default function ComentsSection() {
             <h2>Seção de Comentários</h2>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <TextInput label='Email: ' id='email' name='email' type='email' value={email} setValue={setEmail} />
+                    <TextInput label='Email: ' tag='input' id='email' name='email' type='email' value={email} setValue={setEmail} />
                 </div>
                 <div>
-                    <TextInput label='Comentário: ' id='coment' name='coment' type='text' value={coment} setValue={setComent} />
+                    <TextInput label='Comentário: ' tag='textarea' id='coment' name='coment' rows={6} cols={40} value={coment} setValue={setComent} />
                 </div>
                 <button type='submit'>Enviar Comentário</button>
             </form>
