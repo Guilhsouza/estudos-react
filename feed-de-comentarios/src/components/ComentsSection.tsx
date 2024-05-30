@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import styles from '../styles/comentsSectionStyles.module.css'
 import TextInput from './TextInput'
 
 interface addComentFunc {
@@ -20,19 +19,18 @@ export default function ComentsSection({ addComent }: addComentFunc) {
     }
 
     return (
-        <div className={styles.comentsContainer}>
+        <div >
             <h2>Seção de Comentários</h2>
             <form onSubmit={handleSubmit}>
                 <div>
                     <TextInput label='Email: ' tag='input' id='email' name='email' type='email' value={email} setValue={setEmail} />
                 </div>
                 <div>
-                    <TextInput label='Comentário: ' tag='textarea' id='coment' name='coment' rows={6} cols={40} value={coment} setValue={setComent} />
+                    <TextInput label='Comentário: ' tag='textarea' id='coment' name='coment' rows={7} value={coment} setValue={setComent} />
                 </div>
                 <button type='submit'>Enviar Comentário</button>
             </form>
             <hr />
-
         </div>
     )
 } 

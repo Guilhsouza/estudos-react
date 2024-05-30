@@ -6,7 +6,7 @@ export default function App() {
   const { comentsList, addComent } = useComentsCollection()
 
   return (
-    <div className="app">
+    <div id="app">
       <ComentsSection addComent={addComent} />
 
       <div className="coments">
@@ -14,6 +14,7 @@ export default function App() {
           comentsList.map((uniqueComent) => {
             return (
               <RenderList
+                key={Math.random() * 10000000000}
                 email={uniqueComent.email}
                 coment={uniqueComent.coment} />
             )

@@ -8,7 +8,6 @@ interface inputFunc {
     value: string;
     type?: string;
     rows?: number;
-    cols?: number;
     setValue: Function;
 }
 
@@ -22,7 +21,6 @@ export default function textInput(inputFunc: inputFunc) {
                     id={inputFunc.id}
                     value={inputFunc.value}
                     rows={inputFunc.rows}
-                    cols={inputFunc.cols}
                     onChange={(ev: React.ChangeEvent<HTMLTextAreaElement>) => {
                         inputFunc.setValue(ev.target.value)
                     }}

@@ -8,10 +8,10 @@ export default function RenderList(comentData: comentData) {
     const dataTimeFormated = `Comentário feito em ${time.getDate()}/${time.getMonth() + 1}/${time.getFullYear()}`
 
     return (
-        <div className='coment'>
+        <div className='comentContainer'>
             <h4>{comentData.email}</h4>
             <p>{dataTimeFormated}</p>
-            <p>{comentData.coment}</p>
+            <p className='realComent'>{comentData.coment}</p>
         </div>
     )
 }
