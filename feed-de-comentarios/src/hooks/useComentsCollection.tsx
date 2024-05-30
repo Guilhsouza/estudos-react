@@ -21,5 +21,7 @@ export default function useComentsCollection(): useComentsCollectionReturn {
         })
     }
 
+    { console.log(comentsList) }
+
     return { comentsList, addComent }
 }

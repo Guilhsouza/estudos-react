@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import styles from '../styles/comentsSectionStyles.module.css'
-import useComentsCollection from '../hooks/useComentsCollection'
 import TextInput from './TextInput'
 
-export default function ComentsSection() {
-    const { comentsList, addComent } = useComentsCollection()
+interface addComentFunc {
+    addComent: (email: string, coment: string) => void;
+}
 
+export default function ComentsSection({ addComent }: addComentFunc) {
     const [email, setEmail] = useState('')
     const [coment, setComent] = useState('')
 
