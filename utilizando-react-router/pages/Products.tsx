@@ -5,7 +5,7 @@ type productBody = {
     price: number
 }
 
-import products from "../database.json"
+import products from "../src/database.json"
 
 export default function Products() {
     return (
