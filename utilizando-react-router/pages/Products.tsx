@@ -5,6 +5,7 @@ type productBody = {
     price: number
 }
 
+import { Link } from "react-router-dom"
 import products from "../src/database.json"
 
 export default function Products() {
@@ -19,7 +20,9 @@ export default function Products() {
                         <li key={product.id}>
                             <h4>{product.name}</h4>
                             <p>{product.price}</p>
-                            <button>Ver</button>
+                            <Link to={`/products/${product.id}`}>
+                                <button>Ver</button>
+                            </Link>
                             <button>Compras</button>
                         </li>
                     ))}
