@@ -27,11 +27,7 @@
   },
   "include": [
     "src",
-    "pages/Products.tsx",
-    "pages/Home.tsx",
-    "pages/Cart.tsx",
-    "pages/RootLayout.tsx",
-    "pages/admin/AdminHome.tsx",
+    "pages",
     "components"
   ]
 }
